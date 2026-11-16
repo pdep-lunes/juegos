@@ -1,0 +1,11 @@
+{
+  "name": "juegos",
+  "private": true,
+  "description": "Juegos en Wollok de PdeP Lunes, publicados en pdep-lunes.github.io/juegos",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "python3 -m http.server 8765 -d dist",
+    "deploy": "node build.mjs && sh deploy.sh"
+  }
+}

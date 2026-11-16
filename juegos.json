@@ -1,0 +1,17 @@
+[
+  {
+    "id": "grupo-03",
+    "repo": "../grupo-03-2026",
+    "path": "wollok/mi-juego-en-wollok"
+  },
+  {
+    "id": "grupo-08",
+    "repo": "../grupo-08-2026",
+    "path": "juegoMazmorra"
+  },
+  {
+    "id": "grupo-12",
+    "repo": "../grupo-12-2026",
+    "path": "tp-objetos"
+  }
+]
