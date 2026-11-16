@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pacman · grupo-12 · PdeP Lunes</title>
+  <link rel="stylesheet" href="../lib/juegos.css" />
+  <script src="../lib/p5.min.js"></script>
+  <script src="../lib/p5.sound.min.js"></script>
+  <script src="../lib/game-index.js"></script>
+</head>
+<body class="juego">
+  <header>
+    <a href="../">← Juegos</a>
+    <h1>Pacman <small>grupo-12</small></h1>
+    <span>Hacé click en el juego para darle foco al teclado</span>
+  </header>
+  <main><div id="game"><p id="estado">Cargando…</p></div></main>
+  <script>
+    (async () => {
+      const estado = document.getElementById('estado')
+      try {
+        const project = await (await fetch('game.json')).json()
+        estado.remove()
+        new LocalGame(project).start(document.getElementById('game'))
+      } catch (error) {
+        console.error(error)
+        estado.textContent = 'Error al iniciar el juego: ' + error.message
+      }
+    })()
+  </script>
+</body>
+</html>

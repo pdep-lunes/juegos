@@ -1,0 +1,17 @@
+:root { color-scheme: light dark; --bg: #f6f6f4; --fg: #1d1d1b; --muted: #6b6b66; --card: #fff; --line: #e2e2dc; --accent: #7a3cff; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151514; --fg: #ededea; --muted: #9a9a94; --card: #1f1f1d; --line: #33332f; --accent: #a98bff; } }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+a { color: var(--accent); }
+.indice main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+.indice ul { list-style: none; padding: 0; display: grid; gap: 12px; }
+.indice li a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 20px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--fg); }
+.indice li a:hover { border-color: var(--accent); }
+.indice li span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.juego header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.juego h1 { margin: 0; font-size: 1.1rem; }
+.juego h1 small { color: var(--muted); font-weight: normal; margin-left: 6px; }
+.juego header span { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.juego main { display: flex; justify-content: center; padding: 16px; }
+.juego canvas { width: auto !important; height: auto !important; max-width: 100%; max-height: calc(100dvh - 90px); image-rendering: pixelated; }
+.juego #estado { color: var(--muted); }
